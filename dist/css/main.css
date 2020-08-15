@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-color: #081118;
+}
+
+body .menu {
+  width: 20rem;
+  border-radius: 0.2rem;
+  overflow: hidden;
+}
+
+body .menu a {
+  text-decoration: none;
+}
+
+body .menu .menu-item {
+  list-style: none;
+  border-top: 1px solid #2989b9;
+}
+
+body .menu .menu-item .btn {
+  display: block;
+  padding: 1rem 1.2rem;
+  background: #3498db;
+  color: #fff;
+  position: relative;
+}
+
+body .menu .menu-item .btn i {
+  margin-right: 1rem;
+}
+
+body .menu .menu-item .btn::before {
+  content: '';
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background: #3498db;
+  left: 1.5rem;
+  bottom: -0.5rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+body .menu .menu-item .menu-item__sub {
+  background: #333;
+  overflow: hidden;
+  -webkit-transition: max-height 0.3s;
+  transition: max-height 0.3s;
+  max-height: 0;
+}
+
+body .menu .menu-item .menu-item__sub a {
+  display: block;
+  padding: 1rem 1.6rem;
+  color: #fff;
+  font: .9rem;
+  position: relative;
+  border-bottom: 1px solid #3b3b3b;
+}
+
+body .menu .menu-item .menu-item__sub a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0.4rem;
+  height: 100%;
+  background: #3498db;
+  -webkit-transform: translate(-0.4rem);
+          transform: translate(-0.4rem);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+body .menu .menu-item .menu-item__sub a:hover::before {
+  opacity: 1;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+body .menu .menu-item:target .menu-item__sub {
+  max-height: 10em;
+}
+/*# sourceMappingURL=main.css.map */
